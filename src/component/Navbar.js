@@ -11,10 +11,10 @@ function Navbar() {
       </NavLink>
 
       <div className="navbar__links">
-        <NavLink to="/" activeClassName="selected">
+        <NavLink to="/" activeclassname="selected">
           <p>Home</p>
         </NavLink>
-        <NavLink to="/exercice" activeClassName="selected">
+        <NavLink to="/exercice" activeclassname="selected">
           <p>Exercice</p>
         </NavLink>
       </div>
