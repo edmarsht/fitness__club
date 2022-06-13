@@ -1,0 +1,59 @@
+.home {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    height: 85vh;
+}
+
+.home__text {
+    margin: auto;
+    padding-top: 4rem;
+    width: 40%;
+}
+.home__text h5  {
+    font-size: 26px;
+    color: rgb(252, 89, 89);
+    margin-bottom: 1rem;
+}
+.home__text h3  {
+    margin-bottom: 1rem;
+    font-size: 66px;
+    line-height: 66px;
+}
+.home__text p  {
+    margin-top: 1.5rem;
+    font-size: 18px;
+}
+.home__text button  {
+    margin-top: 1.5rem;
+    font-size: 18px;
+    color: rgb(83, 83, 83);
+    padding: .8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(252, 89, 89);
+}
+
+.home__banner img {
+    position: relative;
+    margin-top: 1.5rem;
+    margin-right: 1.5rem;
+    padding-bottom: 3rem;
+    height: 100vh;
+    /* width: 45vw; */
+}
+
+.home__exercice p {
+    font-size: 210px;
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: 1.3rem;
+    color: rgb(252, 89, 89);
+    opacity: .4;
+    margin-top: -8rem;
+    /* z-index: -1; */
+    position: relative;
+}

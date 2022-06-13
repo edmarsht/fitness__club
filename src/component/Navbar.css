@@ -1,0 +1,29 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1.5rem 2rem;
+    position: absolute;
+    width: 50vw;
+    z-index: 2;
+}
+
+.navbar img {
+    width: 55px;
+}
+
+.navbar__links {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 4rem;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.navbar__links .active p {
+    border-bottom: 3px solid rgb(252, 89, 89);
+    padding-bottom: .3rem;
+}
