@@ -3,9 +3,8 @@ import "./SearchExercice.css";
 import { exerciseOptions, fetchData } from "../utils/fetchData";
 import HorScrollBar from "./HorScrollBar";
 
-function SearchExercice() {
+function SearchExercice( {setExercices, setBodyPart, bodyPart}) {
   const [search, setSearch] = useState("");
-  const [exercices, setExercices] = useState([])
   const [bodyParts, setBodyParts] = useState([])
 
   useEffect(() => {
@@ -54,7 +53,7 @@ function SearchExercice() {
         />
         <button onClick={handleSearch}>Search</button>
       </div>
-      <HorScrollBar data={bodyParts} />
+      <HorScrollBar data={bodyParts} bodyPart={bodyPart} setBodyPart={setBodyPart} />
     </div>
   );
 }

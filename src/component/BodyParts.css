@@ -1,0 +1,24 @@
+.horscrollbar {
+  border-bottom: 1.5px solid rgb(226, 226, 226);
+  margin: 5rem 4rem 10rem;
+}
+.bodyparts {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 2rem;
+  padding: 2.7rem;
+  border-radius: 10px;
+  margin-bottom: 4rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.bodyparts img {
+  width: 130px;
+}
+.bodyparts p {
+  font-size: 26px;
+  font-weight: 600;
+  white-space: nowrap;
+}

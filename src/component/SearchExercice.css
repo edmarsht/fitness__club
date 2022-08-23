@@ -37,3 +37,24 @@ margin-top: 8rem;
     border-radius: 0 5px 5px 0;
     text-transform: none;
 }
+
+@media screen and (max-width: 1240px) {
+    .search {
+        margin-top: 12rem;
+        }
+}
+@media screen and (max-width: 1070px) {
+    .search__title p {
+        width: 50%;
+    }
+}
+@media screen and (max-width: 850px) {
+    .search__title p {
+        width: 60%;
+    }
+}
+@media screen and (max-width: 700px) {
+    .search__title p {
+        width: 80%;
+    }
+}

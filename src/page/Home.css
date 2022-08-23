@@ -57,3 +57,24 @@
     /* z-index: -1; */
     position: relative;
 }
+
+@media screen and (max-width: 1240px) {
+    .home__exercice p {
+        font-size: 150px;
+    } 
+}
+@media screen and (max-width: 1050px) {
+    .home__banner img {
+        height: 80vh;
+        margin-top: 7rem;
+    }
+}
+@media screen and (max-width: 965px) {
+    .home__exercice p {
+        font-size: 100px;
+        margin-top: -6rem;
+    } 
+}
+@media screen and (max-width: 840px) {
+
+}
