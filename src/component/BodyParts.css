@@ -8,17 +8,30 @@
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  margin: 0 2rem;
-  padding: 2.7rem;
+  margin: 1rem 2.5rem;
+  padding: 4rem;
   border-radius: 10px;
   margin-bottom: 4rem;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  cursor: pointer;
+  transition: all ease-out .3s;
+  width: 250px;
+
 }
 .bodyparts img {
-  width: 130px;
+  width: 60px;
 }
 .bodyparts p {
   font-size: 26px;
   font-weight: 600;
   white-space: nowrap;
+}
+
+.bodyparts:hover {
+  transform: scale(1.05);
+  transition: all ease-in .1s;
+}
+
+.activebodyparts {
+  border-top: 4px solid rgb(252, 89, 89);
 }
