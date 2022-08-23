@@ -9,6 +9,7 @@ function BodyParts({ item, setBodyPart, bodyPart }) {
       type="button"
       onClick={() => {
         setBodyPart(item);
+        window.scrollTo({top: 1200, left: 100, behavior: 'smooth'})
       }}
     >
       <img src={gym} alt="gym" />

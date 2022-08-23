@@ -3,10 +3,11 @@ import "./Home.css";
 import banner from "../assets/images/banner.png";
 import { NavLink } from "react-router-dom";
 import SearchExercice from "../component/SearchExercice";
+import Exercices from "../component/Exercices";
 
 function Home() {
   const [bodyPart, setBodyPart] = useState("all");
-  const [exercices, setExercices] = useState([]);
+  const [exercises, setExercises] = useState([]);
 
   return (
     <>
@@ -14,9 +15,9 @@ function Home() {
         <div className="home__text">
           <h5>Fitness Club</h5>
           <h3>Sweat, Smile and Repeat</h3>
-          <p>Check out the most effective exercices </p>
+          <p>Check out the most effective exercises </p>
           <NavLink to="/exercice">
-            <button>Explore Exercices</button>
+            <button>Explore Exercises</button>
           </NavLink>
         </div>
         <div className="home__banner">
@@ -24,11 +25,16 @@ function Home() {
         </div>
       </div>
       <div className="home__exercice">
-        <p>EXERCICE</p>
+        <p>EXERCISE</p>
       </div>
       <SearchExercice
-        setExercices={setExercices}
+        setExercises={setExercises}
         bodyPart={bodyPart}
+        setBodyPart={setBodyPart}
+      />
+      <Exercices
+        setExercises={setExercises}
+        exercises={exercises}
         setBodyPart={setBodyPart}
       />
     </>

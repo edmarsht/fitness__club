@@ -3,7 +3,7 @@ import "./SearchExercice.css";
 import { exerciseOptions, fetchData } from "../utils/fetchData";
 import HorScrollBar from "./HorScrollBar";
 
-function SearchExercice( {setExercices, setBodyPart, bodyPart}) {
+function SearchExercice( {setExercises, setBodyPart, bodyPart}) {
   const [search, setSearch] = useState("");
   const [bodyParts, setBodyParts] = useState([])
 
@@ -20,12 +20,12 @@ function SearchExercice( {setExercices, setBodyPart, bodyPart}) {
 
   const handleSearch = async () => {
     if (search) {
-      const exercicesData = await fetchData(
+      const exercisesData = await fetchData(
         "https://exercisedb.p.rapidapi.com/exercises",
         exerciseOptions
       );
 
-      const searchedExercices = exercicesData.filter(
+      const searchedExercises = exercisesData.filter(
         (exercice) =>
           exercice.name.toLocaleLowerCase().includes(search) ||
           exercice.target.toLocaleLowerCase().includes(search) ||
@@ -34,7 +34,7 @@ function SearchExercice( {setExercices, setBodyPart, bodyPart}) {
       );
 
       setSearch('');
-      setExercices(searchedExercices);
+      setExercises(searchedExercises);
     }
   };
 
