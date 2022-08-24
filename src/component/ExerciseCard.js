@@ -1,9 +1,10 @@
+import { Link } from "react-router-dom";
 import React from "react";
 import Exercices from "./Exercices";
 
 function ExerciseCard({ exercise }) {
   return (
-    <div className="exercisecard">
+    <Link className="exercisecard" to={`/exercise/${exercise.id}`}>
       <div className="exercisecard__name">
         <p>{exercise.name.charAt(0).toUpperCase() + exercise.name.slice(1)}</p>
       </div>
@@ -17,7 +18,7 @@ function ExerciseCard({ exercise }) {
           {exercise.target.charAt(0).toUpperCase() + exercise.target.slice(1)}
         </p>
       </div>
-    </div>
+    </Link>
   );
 }
 

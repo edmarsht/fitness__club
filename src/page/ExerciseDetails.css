@@ -1,3 +1,60 @@
 .exercisedetails {
-    padding: 8rem 2rem;
+    padding: 12rem 4rem 6rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 4rem;
+}
+.exercicedetails__img img {
+    width: 400px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 10px;
+}
+
+.exercisedetails__text h1 {
+    text-align: left;
+    font-size: 60px;
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+}
+.exercisedetails__text p {
+    text-align: justify;
+    font-size: 18px;
+}
+
+.exercise__button.toleft {
+    justify-content: flex-start;
+    padding-top: .8rem;
+    cursor: default;
+    padding-bottom: .8rem;
+}
+
+.exercicedetails__logo img {
+    width: 40px;
+}
+
+.exercisedetails__logo-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.2rem;
+    padding-bottom: 1.2rem;
+}
+
+.exercisedetails__logo-container p {
+    font-weight: 700;
+    text-transform: capitalize;
+    font-size: 18px; 
+}
+
+.exercicedetails__video {
+    padding: 0 2rem;
+}
+.exercicedetails__video-text h1 {
+    font-size: 50px;
+    font-weight: 700;
+}
+.exercicedetails__video-text h1 strong{
+    color: rgb(252, 89, 89);
 }
