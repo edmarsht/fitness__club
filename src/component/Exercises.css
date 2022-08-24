@@ -19,12 +19,17 @@
   text-align: center;
   padding-bottom: 2rem;
   }
+.exercisecard__name p {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 300px;
+  }
 
 .exercise__button {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
   margin: 1rem 0;
   font-size: 18px;
   color: white;

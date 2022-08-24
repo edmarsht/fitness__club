@@ -8,6 +8,9 @@ import Exercices from "../component/Exercices";
 function Home() {
   const [bodyPart, setBodyPart] = useState("all");
   const [exercises, setExercises] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [search, setSearch] = useState("");
+
 
   return (
     <>
@@ -31,11 +34,20 @@ function Home() {
         setExercises={setExercises}
         bodyPart={bodyPart}
         setBodyPart={setBodyPart}
+        currentPage={currentPage}
+        setCurrentPage={setCurrentPage}
+        search={search}
+        setSearch={setSearch}
       />
       <Exercices
         setExercises={setExercises}
         exercises={exercises}
         setBodyPart={setBodyPart}
+        bodyPart={bodyPart}
+        currentPage={currentPage}
+        setCurrentPage={setCurrentPage}
+        search={search}
+        setSearch={setSearch}
       />
     </>
   );

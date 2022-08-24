@@ -3,20 +3,30 @@ import "./SearchExercice.css";
 import { exerciseOptions, fetchData } from "../utils/fetchData";
 import HorScrollBar from "./HorScrollBar";
 
-function SearchExercice( {setExercises, setBodyPart, bodyPart}) {
-  const [search, setSearch] = useState("");
-  const [bodyParts, setBodyParts] = useState([])
+function SearchExercice({
+  setExercises,
+  setBodyPart,
+  bodyPart,
+  currentPage,
+  setCurrentPage,
+  setSearch,
+  search,
+}) {
+  // const [search, setSearch] = useState("dead");
+  const [bodyParts, setBodyParts] = useState([]);
 
   useEffect(() => {
     const fetchExercisesData = async () => {
-      const bodyPartsData = await fetchData('https://exercisedb.p.rapidapi.com/exercises/bodyPartList', exerciseOptions);
+      const bodyPartsData = await fetchData(
+        "https://exercisedb.p.rapidapi.com/exercises/bodyPartList",
+        exerciseOptions
+      );
 
-      setBodyParts(['all', ...bodyPartsData]);
+      setBodyParts(["all", ...bodyPartsData]);
     };
 
     fetchExercisesData();
   }, []);
-  
 
   const handleSearch = async () => {
     if (search) {
@@ -33,8 +43,11 @@ function SearchExercice( {setExercises, setBodyPart, bodyPart}) {
           exercice.bodyPart.toLocaleLowerCase().includes(search)
       );
 
-      setSearch('');
+      setSearch("");
       setExercises(searchedExercises);
+      setCurrentPage(1);
+      window.scrollTo({top: 1600, behavior: 'smooth'})
+
     }
   };
 
@@ -53,7 +66,11 @@ function SearchExercice( {setExercises, setBodyPart, bodyPart}) {
         />
         <button onClick={handleSearch}>Search</button>
       </div>
-      <HorScrollBar data={bodyParts} bodyPart={bodyPart} setBodyPart={setBodyPart} />
+      <HorScrollBar
+        data={bodyParts}
+        bodyPart={bodyPart}
+        setBodyPart={setBodyPart}
+      />
     </div>
   );
 }
