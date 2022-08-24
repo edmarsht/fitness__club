@@ -1,0 +1,18 @@
+.footer {
+    padding: 2rem 0 1rem;
+    background-color: rgb(253, 123, 123);;
+    color: white;
+    text-align: center;
+}
+
+.footer h1 {
+    font-weight: 900;
+    font-size: 62px;    
+}
+
+.footer__details {
+    padding-top: 4rem;
+}
+.footer__details p a{
+    font-size: 18px;
+}

@@ -16,6 +16,7 @@
   cursor: pointer;
   transition: all ease-out .3s;
   width: 250px;
+  background-color: white;
 
 }
 .bodyparts img {

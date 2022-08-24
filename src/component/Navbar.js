@@ -15,7 +15,7 @@ function Navbar() {
           <p>Home</p>
         </NavLink>
         <NavLink to="/exercice" activeclassname="selected">
-          <p>Exercice</p>
+          <p>Exercises</p>
         </NavLink>
       </div>
     </div>

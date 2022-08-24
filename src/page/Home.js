@@ -4,6 +4,7 @@ import banner from "../assets/images/banner.png";
 import { NavLink } from "react-router-dom";
 import SearchExercice from "../component/SearchExercice";
 import Exercices from "../component/Exercices";
+import Footer from "../component/Footer";
 
 function Home() {
   const [bodyPart, setBodyPart] = useState("all");
@@ -49,6 +50,7 @@ function Home() {
         search={search}
         setSearch={setSearch}
       />
+      <Footer />
     </>
   );
 }
