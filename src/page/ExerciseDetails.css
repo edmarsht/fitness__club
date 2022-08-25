@@ -1,10 +1,10 @@
 .exercisedetails {
-    padding: 12rem 4rem 6rem;
+    padding: 12rem 8rem 6rem;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
-    gap: 4rem;
+    justify-content: flex-start;
+    gap: 6rem;
 }
 .exercicedetails__img img {
     width: 400px;
@@ -49,7 +49,7 @@
 }
 
 .exercicedetails__video {
-    padding: 0 2rem;
+    padding: 0 8rem;
 }
 .exercicedetails__video-text h1 {
     font-size: 50px;

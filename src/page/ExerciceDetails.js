@@ -11,6 +11,7 @@ import { exerciseOptions, fetchData } from "../utils/fetchData";
 function ExerciceDetails() {
   const [exerciseDetail, setExerciseDetail] = useState({});
   const { id } = useParams();
+  const [exerciseVideos, setExerciseVideos] = useState([]);
 
   useEffect(() => {
     const fetchExercisesData = async () => {
@@ -22,9 +23,7 @@ function ExerciceDetails() {
         `${exerciseDbUrl}/exercises/exercise/${id}`,
         exerciseOptions
       );
-
       setExerciseDetail(exerciseDetailData);
-      console.log(exerciseDetailData);
     };
 
     fetchExercisesData();
@@ -32,47 +31,47 @@ function ExerciceDetails() {
 
   return (
     <>
-    <div className="exercisedetails">
-      <div className="exercicedetails__img">
-        <img src={exerciseDetail.gifUrl} alt="" />
-      </div>
-      <div className="exercisedetails__text">
-        <h1>{exerciseDetail.name}</h1>
-        <p>
-          {" "}
-          Exercises keep you strong. <span>{exerciseDetail.name}</span> bup is
-          one of the best <br /> exercises to target your{" "}
-          {exerciseDetail.target}. It will help you improve your <br /> mood and
-          gain energy.
-        </p>
-        <div className="exercise__button toleft">
-          <p className="exercise__button-body">{exerciseDetail.bodyPart}</p>
-          <p className="exercise__button-target">{exerciseDetail.target}</p>
+      <div className="exercisedetails">
+        <div className="exercicedetails__img">
+          <img src={exerciseDetail.gifUrl} alt="" />
         </div>
-        <div className="exercicedetails__logo">
-          <div className="exercisedetails__logo-container">
-            <img src={cours} alt="" />
-            <p>{exerciseDetail.bodyPart}</p>
+        <div className="exercisedetails__text">
+          <h1>{exerciseDetail.name}</h1>
+          <p>
+            {" "}
+            Exercises keep you strong. <span>{exerciseDetail.name}</span> bup is
+            one of the best <br /> exercises to target your{" "}
+            {exerciseDetail.target}. It will help you improve your <br /> mood
+            and gain energy.
+          </p>
+          <div className="exercise__button toleft">
+            <p className="exercise__button-body">{exerciseDetail.bodyPart}</p>
+            <p className="exercise__button-target">{exerciseDetail.target}</p>
           </div>
-          <div className="exercisedetails__logo-container">
-            <img src={musculation} alt="" />
-            <p>{exerciseDetail.target}</p>
+          <div className="exercicedetails__logo">
+            <div className="exercisedetails__logo-container">
+              <img src={cours} alt="" />
+              <p>{exerciseDetail.bodyPart}</p>
+            </div>
+            <div className="exercisedetails__logo-container">
+              <img src={musculation} alt="" />
+              <p>{exerciseDetail.target}</p>
+            </div>
+            <div className="exercisedetails__logo-container">
+              <img src={cardiaque} alt="" />
+              <p>{exerciseDetail.equipment}</p>
+            </div>
           </div>
-          <div className="exercisedetails__logo-container">
-            <img src={cardiaque} alt="" />
-            <p>{exerciseDetail.equipment}</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div className="exercicedetails__video">
-      <div className="exercicedetails__video-text">
-        <h1>Watch <strong>{exerciseDetail.name}</strong> exercice videos.</h1> 
-        <div className="exercicedetails__video-videos">
-          
         </div>
       </div>
-    </div>
+      {/* <div className="exercicedetails__video">
+        <div className="exercicedetails__video-text">
+          <h1>
+            Watch <strong>{exerciseDetail.name}</strong> exercice videos.
+          </h1>
+          <div className="exercicedetails__video-videos"></div>
+        </div>
+      </div> */}
     </>
   );
 }

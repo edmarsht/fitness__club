@@ -14,9 +14,9 @@ function Navbar() {
         <NavLink to="/" activeclassname="selected">
           <p>Home</p>
         </NavLink>
-        <NavLink to="/exercice" activeclassname="selected">
+        {/* <NavLink to="/exercice" activeclassname="selected">
           <p>Exercises</p>
-        </NavLink>
+        </NavLink> */}
       </div>
     </div>
   );
